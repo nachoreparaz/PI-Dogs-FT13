@@ -1,0 +1,29 @@
+.abc{
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    background-color: white;
+    margin-left: 500px;
+    width:250px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+  .paginationCtn {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .paginationCtn a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .paginationCtn a:hover {
+    color: white;
+  }
+  
+  .paginationCtn a:hover:not(.active) {background-color: #4CAF50;}
+
+ 

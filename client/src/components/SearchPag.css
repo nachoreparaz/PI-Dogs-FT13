@@ -1,0 +1,26 @@
+.ctnSearch{
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    background-color: white;
+    margin-left: 375px;
+    width:500px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.pagCtn{
+    display: inline-block;
+    margin-right: 15px;
+}
+.pagCtn a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagCtn a:hover {
+    color: white;
+  }
+  
+  .pagCtn a:hover:not(.active) {background-color: #4CAF50;}

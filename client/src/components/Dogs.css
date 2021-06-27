@@ -1,0 +1,81 @@
+html{
+  /* background-image : url('https://static.vecteezy.com/system/resources/previews/002/092/090/non_2x/black-animal-paw-pattern-free-vector.jpg'); */
+  background-image : url('https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-functional-dog-food-promotion-main-map-image_144794.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form-container {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* .btnSearch{
+  display: inline-block;
+  padding: 3px;
+  margin-top: 1.5px;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+
+} */
+.ordenamiento{
+  display: block;
+}
+.spanOrder{
+  display: flex;
+  justify-content: center;
+}
+.selectOrder{
+  display: flex;
+  justify-content: center;
+}
+
+.dogsContainer{
+  margin: 20px;
+  width: 20rem;
+  background-color:white;
+  border:none;
+  padding: 5px;
+  box-shadow: 0px 0px 5px 1px black; /*#888888;*/
+  border-radius: 10px;
+  justify-content:center;
+}
+.dogsContainer a {
+  color: #333;
+  text-decoration: none;
+}
+.dogName{
+  display: flex;
+  justify-content: center;
+}
+.dogTemper{
+  display: flex;
+  margin-left: 10px;
+}
+.imgCtn{
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.img{
+  width: 300px;
+  height: 250px;
+  border-radius: 5px
+}
+.img:hover{
+  transform: scale(1.5);
+}
