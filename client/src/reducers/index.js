@@ -4,6 +4,8 @@ const initialState = {
     searchDogs: [],
     dogsDetail:[],
     getTemper: [],
+    temperFilter: [],
+    temperFilterSearch: []
 }
 
 function rootReducer(state = initialState, action){
@@ -51,12 +53,12 @@ function rootReducer(state = initialState, action){
         case 'TEMPER_FILTER':
             return{
                 ...state,
-                dogs: action.payload
+                temperFilter: action.payload
             }
         case 'TEMPER_FILTER_SEARCH':
             return{
                 ...state,
-                searchDogs: action.payload
+                temperFilterSearch: action.payload
             }
         default:
             return state

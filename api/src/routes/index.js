@@ -27,7 +27,7 @@ const router = Router();
     router.get('/temperamento', GetTemper)
 
 //--------POST /dog:---------------
-    router.post('/dog', CreateDog)
+    router.post('/dogi', CreateDog)
 
 
 module.exports = router;

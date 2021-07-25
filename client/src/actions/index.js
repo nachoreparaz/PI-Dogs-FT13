@@ -68,17 +68,31 @@ export function getDogDetail(id){
   }
 
   export function filterTemper(dogs, value){
-    const filter = dogs.filter( x => x.temper === value)
+    let array = []
+    for(var i = 0 ; i < dogs.length; i++){
+        if(dogs[i].temper){
+            if(dogs[i].temper.includes(value)){
+                array.push(dogs[i])
+            }
+        }
+    }
     return {
          type:'TEMPER_FILTER',
-         payload: filter
+         payload: array
      }
   }
   export function filterTemperSearch(dogs, value){
-    const filter = dogs.filter( x => x.temper === value)
+    let array = []
+    for(var i = 0 ; i < dogs.length; i++){
+        if(dogs[i].temper){
+            if(dogs[i].temper.includes(value)){
+                array.push(dogs[i])
+            }
+        }
+    }
     return {
          type:'TEMPER_FILTER_SEARCH',
-         payload: filter
+         payload: array
      }
   }
 

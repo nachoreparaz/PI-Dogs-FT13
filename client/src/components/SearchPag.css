@@ -2,11 +2,9 @@
     display: flex;
     justify-content: center;
     margin: 2px;
-    background-color: white;
+    margin-bottom: 30px;
     margin-left: 375px;
     width:500px;
-    border: 1px solid black;
-    border-radius: 10px;
 }
 .pagCtn{
     display: inline-block;
