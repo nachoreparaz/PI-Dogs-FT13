@@ -59,7 +59,7 @@ const SearchDogs = () => {
         </div>
       </div>
 
-      <div className="ordenamiento">
+  {/*     <div className="ordenamiento">
         <div className="spanOrder">
           <span>Ordenamiento Alfabeticamente: </span>
         </div>
@@ -73,7 +73,7 @@ const SearchDogs = () => {
             </option>
           </select>
         </div>
-      </div>
+      </div> */}
       <div></div>
       <div className="container">
         {filterByTemp.length < 1 && currentDogs

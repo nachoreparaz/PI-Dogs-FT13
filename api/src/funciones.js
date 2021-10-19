@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 
 async function GetDogs(req, res) {
     
-  const response = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${api_key}`);
+  const response = await axios.get(`https://api.thedogapi.com/v1/breeds?`);
   const result = response.data
   var array = []
       for(var i = 0; i < result.length ; i++){

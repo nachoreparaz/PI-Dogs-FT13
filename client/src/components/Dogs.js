@@ -14,6 +14,7 @@ import Pagination from "./Pagination";
 const Dogs = () => {
   const [current, setCurrent] = useState(1);
   const [dogsPerPage, setDogsPerPage] = useState(10);
+  const [ orderDogs, setOrderDogs ] = useState()
 
   const dispatch = useDispatch();
   const getDogsRedux = useSelector((state) => state.dogs);
@@ -27,18 +28,25 @@ const Dogs = () => {
 
   const indexOfLastDog = current * dogsPerPage;
   const indexOfFirstDog = indexOfLastDog - dogsPerPage;
-  const currentDogs = getDogsRedux.slice(indexOfFirstDog, indexOfLastDog);
+  const currentDogs = orderDogs ? orderDogs.slice(indexOfFirstDog, indexOfLastDog) : getDogsRedux.slice(indexOfFirstDog, indexOfLastDog);
   const currentDogsFilter = filterByTemp.slice(indexOfFirstDog, indexOfLastDog);
 
   const paginate = (pageNumber) => setCurrent(pageNumber);
 
   function fn1(e) {
     if (e.target.value == "Z-A") {
-      dispatch(orderZA(getDogsRedux));
-    } else {
-      dispatch(orderAZ(getDogsRedux));
+      var za = getDogsRedux.sort((a,b) => a.name < b.name?1:-1)
+      setOrderDogs(za)
+    } 
+    if( e.target.value == "A-Z" ) {
+      window.location.reload()
+      var az = getDogsRedux.sort((a,b) => a.name > b.name?1:-1)
+      setOrderDogs(az)
     }
   }
+
+  console.log("orderDogs: ", orderDogs)
+  console.log("currentDogs: ", currentDogs)
 
   function onFilter(e) {
     dispatch(filterTemper(getDogsRedux, e.target.value));
