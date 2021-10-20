@@ -29,6 +29,8 @@ const SearchDogs = () => {
   const currentDogsFilter = filterByTemp.slice(indexOfFirstDog, indexOfLastDog);
 
   const paginate = (pageNumber) => setCurrent(pageNumber);
+  const nextPage = () => setCurrent(current + 1);
+  const prevPage = () => setCurrent(current - 1);
 
   function fn1(e) {
     if (e.target.value == "Z-A") {
@@ -113,6 +115,8 @@ const SearchDogs = () => {
         filterByTemp={filterByTemp.length}
         totalDogs={search.length}
         paginate={paginate}
+        nextPage = { nextPage }
+        prevPage = { prevPage }
       />
     </div>
   );

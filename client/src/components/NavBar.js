@@ -5,7 +5,7 @@ import { getDogsbyBreed } from "../actions";
 import "./NavBar.css";
 
 const NavBar = () => {
-  const [name, setName] = useState("");
+  const [name, setName] = useState();
 
   const dispatch = useDispatch();
 
@@ -15,8 +15,8 @@ const NavBar = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
+    setName();
     getDogsbyBreed(name);
-    setName("");
   }
 
   return (

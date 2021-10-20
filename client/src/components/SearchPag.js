@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchPag.css";
 
-const SearchPag = ({ dogsPerPage, filterByTemp, totalDogs, paginate }) => {
+const SearchPag = ({ dogsPerPage, filterByTemp, totalDogs, paginate, nextPage, prevPage }) => {
   const pageNumbers = [];
 
   if (filterByTemp > 0) {
@@ -15,17 +15,23 @@ const SearchPag = ({ dogsPerPage, filterByTemp, totalDogs, paginate }) => {
   }
 
   return (
-    <div>
-      <div className="ctnSearch">
-        {pageNumbers.map((number) => (
-          <div key={number} className="pagCtn">
-            <a onClick={() => paginate(number)} href="#" className="btnA">
-              {number}
-            </a>
-          </div>
-        ))}
+    <div className="pagination:container">
+      <div class="pagination:number arrow" onClick = { () => prevPage() } >
+        <span class="arrow:text">{"<"} Prev</span> 
       </div>
+      {
+      pageNumbers.map((number) => (
+        <div key={number} className="pagination:number" onClick={() => paginate(number)} >
+          <a  href="#" className="btnA">
+            {number}
+          </a>
+        </div>
+      ))
+      }
+      <div class="pagination:number arrow" onClick = { () => nextPage() } >
+        <span class="arrow:text">Next {">"}</span> 
     </div>
+</div>
   );
 };
 
